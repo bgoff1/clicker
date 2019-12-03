@@ -1,0 +1,56 @@
+{
+  "name": "clicker",
+  "version": "0.0.1",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod --base-href /clicker/",
+    "deploy": "gh-pages -d build",
+    "test": "jest",
+    "lint": "ng lint"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~8.2.4",
+    "@angular/common": "~8.2.4",
+    "@angular/compiler": "~8.2.4",
+    "@angular/core": "~8.2.4",
+    "@angular/forms": "~8.2.4",
+    "@angular/platform-browser": "~8.2.4",
+    "@angular/platform-browser-dynamic": "~8.2.4",
+    "@angular/router": "~8.2.4",
+    "bulma": "^0.8.0",
+    "bulmaswatch": "^0.7.5",
+    "gh-pages": "^2.1.1",
+    "rxjs": "~6.4.0",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.803.3",
+    "@angular/cli": "~8.3.3",
+    "@angular/compiler-cli": "~8.2.4",
+    "@angular/language-service": "~8.2.4",
+    "@types/jest": "^24.0.19",
+    "@types/node": "~8.9.4",
+    "codelyzer": "^5.0.0",
+    "jest": "^24.9.0",
+    "jest-preset-angular": "^7.1.1",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.15.0",
+    "typescript": "~3.5.3"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.config.ts"
+    ],
+    "moduleNameMapper": {
+      "@resources/(.*)": "<rootDir>/src/app/resources/$1",
+      "@components/(.*)": "<rootDir>/src/app/components/$1",
+      "@services/(.*)": "<rootDir>/src/app/services/$1",
+      "@models/(.*)": "<rootDir>/src/app/models/$1",
+      "@mocks/(.*)": "<rootDir>/src/app/extras/mocks/$1"
+    }
+  }
+}
